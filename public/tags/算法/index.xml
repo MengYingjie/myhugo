@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 Mar 2021 09:39:50 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/post/test/</link>
+      <pubDate>Thu, 04 Mar 2021 09:39:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/test/</guid>
+      <description>本文由 简悦 SimpRead 转码， 原文地址 blog.csdn.net 一，使用 gitbook init 时，卡在了 Installing GitBook 3.2.3 这一步 解决办法： 一，翻墙 二，使用淘宝镜像下载： npm 下载路径，检查是不是淘宝镜像： 1 2 3</description>
+    </item>
+    
+    <item>
+      <title>🎯美团笔试-空间回廊</title>
+      <link>http://localhost:1313/post/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/</link>
+      <pubDate>Thu, 04 Mar 2021 09:39:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/</guid>
+      <description>⭐ 孟应杰的网站: www.mengyingjie.com ⭐ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以</description>
+    </item>
+    
+  </channel>
+</rss>

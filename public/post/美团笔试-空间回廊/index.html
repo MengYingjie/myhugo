@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>🎯美团笔试-空间回廊 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="⭐ 孟应杰的网站: www.mengyingjie.com ⭐ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="🎯美团笔试-空间回廊" />
+<meta property="og:description" content="⭐ 孟应杰的网站: www.mengyingjie.com ⭐ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-04T09:39:50&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-04T09:39:50&#43;00:00" />
+
+<meta itemprop="name" content="🎯美团笔试-空间回廊">
+<meta itemprop="description" content="⭐ 孟应杰的网站: www.mengyingjie.com ⭐ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以"><meta itemprop="datePublished" content="2021-03-04T09:39:50&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-04T09:39:50&#43;00:00" />
+<meta itemprop="wordCount" content="1101">
+<meta itemprop="keywords" content="c&#43;&#43;,算法," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="🎯美团笔试-空间回廊"/>
+<meta name="twitter:description" content="⭐ 孟应杰的网站: www.mengyingjie.com ⭐ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">🎯美团笔试-空间回廊</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-03-04 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%AE%97%E6%B3%95/"> 算法 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#题目描述">📌题目描述：</a></li>
+            <li><a href="#代码实现">⌨代码实现</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p><a href="http://www.mengyingjie.com/">⭐ 孟应杰的网站: www.mengyingjie.com ⭐</a></p>
+</blockquote>
+<h3 id="题目描述">📌题目描述：</h3>
+<p>有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以走到1号房间。</p>
+<p>这个游戏的最终目的是为了在这些房间中留下尽可能多的烙印，在每个房间里留下烙印所花费的法力值是不相同的，已知他共有m点法力值，这些法力是不可恢复的。</p>
+<p><img src="36-1.jpg" alt=""></p>
+<p>小明刚接触这款游戏，所以只会耿直的玩，所以他的每一个行动都是可以预料的：</p>
+<p>1.一开始小明位于1号房间。<br>
+2.如果他剩余的法力能在当前的房间中留下一个烙印，那么他就会毫不犹豫的花费法力值。<br>
+3.无论是否留下了烙印，下一个时刻他都会进入下一个房间，如果当前位于i房间，则会进入i+1房间，如果在n号房间则会进入1号房间。<br>
+4.当重复经过某一个房间时，可以再次留下烙印。</p>
+<p>很显然，这个游戏是会终止的，即剩余的法力值不能在任何房间留下烙印的时候，游戏终止。请问他共能留下多少个烙印。</p>
+<h4 id="输入">输入</h4>
+<p>输入第一行有两个正整数n和m，分别代表房间数量和小明拥有的法力值。(1&lt;=n&lt;=100000,1&lt;=m&lt;=10^18)<br>
+输入第二行有n个正整数，分别代表1~n号房间留下烙印的法力值花费。(1&lt;=a_i&lt;=10^9)</p>
+<h4 id="输出">输出</h4>
+<p>输出仅包含一个整数，即最多能留下的烙印。</p>
+<h4 id="样例输入">样例输入</h4>
+<p>4 21<br>
+2 1 4 3</p>
+<h4 id="样例输出">样例输出</h4>
+<p>9</p>
+<h4 id="提示">提示</h4>
+<p>样例解释：
+显然是所有房间都留下两个烙印，然后剩下1点法力值，仅能在2号房间再留下一个烙印.</p>
+<h3 id="代码实现">⌨代码实现</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="c1">//输入房间数量m，小明拥有的法力值n
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+    <span class="c1">//输入每个房间消耗的法力值
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="c1">//定义两个变量，cnt用来计数，记录留下的烙印数
+</span><span class="c1"></span>    <span class="c1">//sign,为设立的标志，当小明在一圈中消耗过法力值，标志位置为1，
+</span><span class="c1"></span>    <span class="c1">//如果一圈下来sign=0，那么代表这一圈小明没有消耗法力值，那么就可以结束循环了。
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">sign</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c1">//循环开始，因为不知道要循环多少遍，所以中间参数为空
+</span><span class="c1"></span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="c1">//如果法力值大于当前格子的法力值
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="n">m</span> <span class="o">&gt;=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="c1">//法力值减去当前格子的法力值
+</span><span class="c1"></span>            <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>          <span class="c1">//烙印数+1
+</span><span class="c1"></span>            <span class="n">sign</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">//本圈消耗了法力值，sign=1
+</span><span class="c1"></span>        <span class="p">}</span>
+        <span class="c1">//当i = n - 1，说明一次循环结束，如果sign=1，则需要进行下一轮循环
+</span><span class="c1"></span>        <span class="c1">//那么就把sign归0，有因为结束时会有i++，所以i=0-1，那么就开启新一轮循环
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">((</span><span class="n">i</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">sign</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)){</span>
+            <span class="n">sign</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">//当i = n - 1，循环结束，sign=0，则不需要继续循环，直接跳出死循环。
+</span><span class="c1"></span>        <span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">i</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">sign</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)){</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>遇到此类问题，但看了文章还是未解决，<br>
+评论或加 QQ：781378815</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-03-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+          <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/test/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">test</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/json%E5%88%B0object%E5%88%B0%E5%85%B7%E4%BD%93%E5%AF%B9%E8%B1%A1/">
+            <span class="next-text nav-default">🔑json到Object到具体对象</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
