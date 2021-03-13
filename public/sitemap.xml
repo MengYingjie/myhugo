@@ -38,35 +38,42 @@
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-03-07T09:50:40+00:00</lastmod>
+    <lastmod>2021-03-07T09:50:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/java/</loc>
-    <lastmod>2021-03-07T09:50:40+00:00</lastmod>
+    <lastmod>2021-03-07T09:50:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/java/</loc>
-    <lastmod>2021-03-07T09:50:40+00:00</lastmod>
+    <lastmod>2021-03-07T09:50:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2021-03-07T09:50:40+00:00</lastmod>
+    <lastmod>2021-03-07T09:50:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/test2/</loc>
+    <lastmod>2021-03-07T09:50:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2021-03-07T09:50:40+00:00</lastmod>
+    <lastmod>2021-03-07T09:50:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

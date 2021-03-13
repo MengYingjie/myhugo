@@ -6,7 +6,16 @@
     <description>Recent content in 技巧 on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Mar 2021 09:50:40 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 09:50:50 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test2</title>
+      <link>http://localhost:1313/post/test2/</link>
+      <pubDate>Sun, 07 Mar 2021 09:50:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/test2/</guid>
+      <description>📋两种内部类用法 1 2 3 4 5 6 7 8 static class Outer { class Inner {} static class StaticInner {} } Outer outer = new Outer(); Outer.Inner inner = outer.new Inner(); Outer.StaticInner inner0 = new Outer.StaticInner(); 🤔为什么设计内部类 1 在一个类内部，需要操作某种属性，而</description>
+    </item>
+    
     <item>
       <title>🤔为什么JAVA内部类要设计成静态和非静态</title>
       <link>http://localhost:1313/post/%E4%B8%BA%E4%BB%80%E4%B9%88java%E5%86%85%E9%83%A8%E7%B1%BB%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%88%90%E9%9D%99%E6%80%81%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81/</link>
