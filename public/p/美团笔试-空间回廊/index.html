@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='⭐ 孟应杰的网站: www.mengyingjie.com ⭐
+ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以走到1号房间。
+这个游戏的最终目的是为了在这些房间中留下尽可能多的烙印，在每个房间里留下烙印所花费的法力值是不相同的，已知他共有m点法力值，这些法力是不可恢复的。
+小明刚接触这款游戏，所以只会耿直的玩，所以他的每一个行动都是可以预料的：
+1.一开始小明位于1号房间。
+2.如果他剩余的法力能在当前的房间中留下一个烙印，那么他就会毫不犹豫的花费法力值。
+3.无论是否留下了烙印，下一个时刻他都会进入下一个房间，如果当前位于i房间，则会进入i&#43;1房间，如果在n号房间则会进入1号房间。
+4.当重复经过某一个房间时，可以再次留下烙印。
+很显然，这个游戏是会终止的，即剩余的法力值不能在任何房间留下烙印的时候，游戏终止。请问他共能留下多少个烙印。
+输入 输入第一行有两个正整数n和m，分别代表房间数量和小明拥有的法力值。(1&amp;lt;=n&amp;lt;=100000,1&amp;lt;=m&amp;lt;=10^18)
+输入第二行有n个正整数，分别代表1~n号房间留下烙印的法力值花费。(1&amp;lt;=a_i&amp;lt;=10^9)
+输出 输出仅包含一个整数，即最多能留下的烙印。
+样例输入 4 21
+2 1 4 3
+样例输出 9
+提示 样例解释： 显然是所有房间都留下两个烙印，然后剩下1点法力值，仅能在2号房间再留下一个烙印.
+⌨代码实现 #include&amp;lt;iostream&amp;gt;using namespace std; int main(){ //输入房间数量m，小明拥有的法力值n  int n, m; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; //输入每个房间消耗的法力值  int arr[n]; for(int i = 0; i &amp;lt; n; i&#43;&#43;){ cin &amp;gt;&amp;gt; arr[i]; } //定义两个变量，cnt用来计数，记录留下的烙印数  //sign,为设立的标志，当小明在一圈中消耗过法力值，标志位置为1，  //如果一圈下来sign=0，那么代表这一圈小明没有消耗法力值，那么就可以结束循环了。  int cnt = 0; int sign = 0; //循环开始，因为不知道要循环多少遍，所以中间参数为空  for(int i = 0; ; i&#43;&#43; ){ //如果法力值大于当前格子的法力值  if( m &amp;gt;= arr[i]){ m = m - arr[i]; //法力值减去当前格子的法力值  cnt&#43;&#43;; //烙印数&#43;1  sign = 1; //本圈消耗了法力值，sign=1  } //当i = n - 1，说明一次循环结束，如果sign=1，则需要进行下一轮循环  //那么就把sign归0，有因为结束时会有i&#43;&#43;，所以i=0-1，那么就开启新一轮循环  if((i == n - 1) &amp;amp;&amp;amp; (sign == 1)){ sign = 0; i = 0-1; } //当i = n - 1，循环结束，sign=0，则不需要继续循环，直接跳出死循环。  else if((i == n - 1) &amp;amp;&amp;amp; (sign == 0)){ break; } } cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl; return 0; }  遇到此类问题，但看了文章还是未解决，'><title>🎯美团笔试-空间回廊</title>
+
+<link rel='canonical' href='https://example.com/p/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='🎯美团笔试-空间回廊'>
+<meta property='og:description' content='⭐ 孟应杰的网站: www.mengyingjie.com ⭐
+ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以走到1号房间。
+这个游戏的最终目的是为了在这些房间中留下尽可能多的烙印，在每个房间里留下烙印所花费的法力值是不相同的，已知他共有m点法力值，这些法力是不可恢复的。
+小明刚接触这款游戏，所以只会耿直的玩，所以他的每一个行动都是可以预料的：
+1.一开始小明位于1号房间。
+2.如果他剩余的法力能在当前的房间中留下一个烙印，那么他就会毫不犹豫的花费法力值。
+3.无论是否留下了烙印，下一个时刻他都会进入下一个房间，如果当前位于i房间，则会进入i&#43;1房间，如果在n号房间则会进入1号房间。
+4.当重复经过某一个房间时，可以再次留下烙印。
+很显然，这个游戏是会终止的，即剩余的法力值不能在任何房间留下烙印的时候，游戏终止。请问他共能留下多少个烙印。
+输入 输入第一行有两个正整数n和m，分别代表房间数量和小明拥有的法力值。(1&amp;lt;=n&amp;lt;=100000,1&amp;lt;=m&amp;lt;=10^18)
+输入第二行有n个正整数，分别代表1~n号房间留下烙印的法力值花费。(1&amp;lt;=a_i&amp;lt;=10^9)
+输出 输出仅包含一个整数，即最多能留下的烙印。
+样例输入 4 21
+2 1 4 3
+样例输出 9
+提示 样例解释： 显然是所有房间都留下两个烙印，然后剩下1点法力值，仅能在2号房间再留下一个烙印.
+⌨代码实现 #include&amp;lt;iostream&amp;gt;using namespace std; int main(){ //输入房间数量m，小明拥有的法力值n  int n, m; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; //输入每个房间消耗的法力值  int arr[n]; for(int i = 0; i &amp;lt; n; i&#43;&#43;){ cin &amp;gt;&amp;gt; arr[i]; } //定义两个变量，cnt用来计数，记录留下的烙印数  //sign,为设立的标志，当小明在一圈中消耗过法力值，标志位置为1，  //如果一圈下来sign=0，那么代表这一圈小明没有消耗法力值，那么就可以结束循环了。  int cnt = 0; int sign = 0; //循环开始，因为不知道要循环多少遍，所以中间参数为空  for(int i = 0; ; i&#43;&#43; ){ //如果法力值大于当前格子的法力值  if( m &amp;gt;= arr[i]){ m = m - arr[i]; //法力值减去当前格子的法力值  cnt&#43;&#43;; //烙印数&#43;1  sign = 1; //本圈消耗了法力值，sign=1  } //当i = n - 1，说明一次循环结束，如果sign=1，则需要进行下一轮循环  //那么就把sign归0，有因为结束时会有i&#43;&#43;，所以i=0-1，那么就开启新一轮循环  if((i == n - 1) &amp;amp;&amp;amp; (sign == 1)){ sign = 0; i = 0-1; } //当i = n - 1，循环结束，sign=0，则不需要继续循环，直接跳出死循环。  else if((i == n - 1) &amp;amp;&amp;amp; (sign == 0)){ break; } } cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl; return 0; }  遇到此类问题，但看了文章还是未解决，'>
+<meta property='og:url' content='https://example.com/p/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/'>
+<meta property='og:site_name' content='Example Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='c&#43;&#43;' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2021-03-04T09:39:50&#43;00:00'/><meta property='article:modified_time' content='2021-03-04T09:39:50&#43;00:00'/>
+<meta name="twitter:title" content="🎯美团笔试-空间回廊">
+<meta name="twitter:description" content="⭐ 孟应杰的网站: www.mengyingjie.com ⭐
+ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以走到1号房间。
+这个游戏的最终目的是为了在这些房间中留下尽可能多的烙印，在每个房间里留下烙印所花费的法力值是不相同的，已知他共有m点法力值，这些法力是不可恢复的。
+小明刚接触这款游戏，所以只会耿直的玩，所以他的每一个行动都是可以预料的：
+1.一开始小明位于1号房间。
+2.如果他剩余的法力能在当前的房间中留下一个烙印，那么他就会毫不犹豫的花费法力值。
+3.无论是否留下了烙印，下一个时刻他都会进入下一个房间，如果当前位于i房间，则会进入i&#43;1房间，如果在n号房间则会进入1号房间。
+4.当重复经过某一个房间时，可以再次留下烙印。
+很显然，这个游戏是会终止的，即剩余的法力值不能在任何房间留下烙印的时候，游戏终止。请问他共能留下多少个烙印。
+输入 输入第一行有两个正整数n和m，分别代表房间数量和小明拥有的法力值。(1&amp;lt;=n&amp;lt;=100000,1&amp;lt;=m&amp;lt;=10^18)
+输入第二行有n个正整数，分别代表1~n号房间留下烙印的法力值花费。(1&amp;lt;=a_i&amp;lt;=10^9)
+输出 输出仅包含一个整数，即最多能留下的烙印。
+样例输入 4 21
+2 1 4 3
+样例输出 9
+提示 样例解释： 显然是所有房间都留下两个烙印，然后剩下1点法力值，仅能在2号房间再留下一个烙印.
+⌨代码实现 #include&amp;lt;iostream&amp;gt;using namespace std; int main(){ //输入房间数量m，小明拥有的法力值n  int n, m; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; //输入每个房间消耗的法力值  int arr[n]; for(int i = 0; i &amp;lt; n; i&#43;&#43;){ cin &amp;gt;&amp;gt; arr[i]; } //定义两个变量，cnt用来计数，记录留下的烙印数  //sign,为设立的标志，当小明在一圈中消耗过法力值，标志位置为1，  //如果一圈下来sign=0，那么代表这一圈小明没有消耗法力值，那么就可以结束循环了。  int cnt = 0; int sign = 0; //循环开始，因为不知道要循环多少遍，所以中间参数为空  for(int i = 0; ; i&#43;&#43; ){ //如果法力值大于当前格子的法力值  if( m &amp;gt;= arr[i]){ m = m - arr[i]; //法力值减去当前格子的法力值  cnt&#43;&#43;; //烙印数&#43;1  sign = 1; //本圈消耗了法力值，sign=1  } //当i = n - 1，说明一次循环结束，如果sign=1，则需要进行下一轮循环  //那么就把sign归0，有因为结束时会有i&#43;&#43;，所以i=0-1，那么就开启新一轮循环  if((i == n - 1) &amp;amp;&amp;amp; (sign == 1)){ sign = 0; i = 0-1; } //当i = n - 1，循环结束，sign=0，则不需要继续循环，直接跳出死循环。  else if((i == n - 1) &amp;amp;&amp;amp; (sign == 0)){ break; } } cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl; return 0; }  遇到此类问题，但看了文章还是未解决，">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://example.com">Example Site</a></h1>
+        <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://example.com" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AE%97%E6%B3%95/" >
+                算法
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/">🎯美团笔试-空间回廊</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Mar 04, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p><a class="link" href="http://www.mengyingjie.com/"  target="_blank" rel="noopener"
+    >⭐ 孟应杰的网站: www.mengyingjie.com ⭐</a></p>
+</blockquote>
+<h3 id="题目描述">📌题目描述：</h3>
+<p>有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以走到1号房间。</p>
+<p>这个游戏的最终目的是为了在这些房间中留下尽可能多的烙印，在每个房间里留下烙印所花费的法力值是不相同的，已知他共有m点法力值，这些法力是不可恢复的。</p>
+<p><img src="/36-1.jpg" alt=""  /></p>
+<p>小明刚接触这款游戏，所以只会耿直的玩，所以他的每一个行动都是可以预料的：</p>
+<p>1.一开始小明位于1号房间。<br>
+2.如果他剩余的法力能在当前的房间中留下一个烙印，那么他就会毫不犹豫的花费法力值。<br>
+3.无论是否留下了烙印，下一个时刻他都会进入下一个房间，如果当前位于i房间，则会进入i+1房间，如果在n号房间则会进入1号房间。<br>
+4.当重复经过某一个房间时，可以再次留下烙印。</p>
+<p>很显然，这个游戏是会终止的，即剩余的法力值不能在任何房间留下烙印的时候，游戏终止。请问他共能留下多少个烙印。</p>
+<h4 id="输入">输入</h4>
+<p>输入第一行有两个正整数n和m，分别代表房间数量和小明拥有的法力值。(1&lt;=n&lt;=100000,1&lt;=m&lt;=10^18)<br>
+输入第二行有n个正整数，分别代表1~n号房间留下烙印的法力值花费。(1&lt;=a_i&lt;=10^9)</p>
+<h4 id="输出">输出</h4>
+<p>输出仅包含一个整数，即最多能留下的烙印。</p>
+<h4 id="样例输入">样例输入</h4>
+<p>4 21<br>
+2 1 4 3</p>
+<h4 id="样例输出">样例输出</h4>
+<p>9</p>
+<h4 id="提示">提示</h4>
+<p>样例解释：
+显然是所有房间都留下两个烙印，然后剩下1点法力值，仅能在2号房间再留下一个烙印.</p>
+<h3 id="代码实现">⌨代码实现</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="c1">//输入房间数量m，小明拥有的法力值n
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+    <span class="c1">//输入每个房间消耗的法力值
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="c1">//定义两个变量，cnt用来计数，记录留下的烙印数
+</span><span class="c1"></span>    <span class="c1">//sign,为设立的标志，当小明在一圈中消耗过法力值，标志位置为1，
+</span><span class="c1"></span>    <span class="c1">//如果一圈下来sign=0，那么代表这一圈小明没有消耗法力值，那么就可以结束循环了。
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">sign</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c1">//循环开始，因为不知道要循环多少遍，所以中间参数为空
+</span><span class="c1"></span>    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="c1">//如果法力值大于当前格子的法力值
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span> <span class="n">m</span> <span class="o">&gt;=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="c1">//法力值减去当前格子的法力值
+</span><span class="c1"></span>            <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>          <span class="c1">//烙印数+1
+</span><span class="c1"></span>            <span class="n">sign</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">//本圈消耗了法力值，sign=1
+</span><span class="c1"></span>        <span class="p">}</span>
+        <span class="c1">//当i = n - 1，说明一次循环结束，如果sign=1，则需要进行下一轮循环
+</span><span class="c1"></span>        <span class="c1">//那么就把sign归0，有因为结束时会有i++，所以i=0-1，那么就开启新一轮循环
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">((</span><span class="n">i</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">sign</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)){</span>
+            <span class="n">sign</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">//当i = n - 1，循环结束，sign=0，则不需要继续循环，直接跳出死循环。
+</span><span class="c1"></span>        <span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">i</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">sign</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)){</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p>遇到此类问题，但看了文章还是未解决，<br>
+评论或加 QQ：781378815</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+        
+            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/test/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">test</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 Example Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

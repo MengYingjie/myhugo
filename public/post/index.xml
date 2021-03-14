@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
+    <title>Posts on Example Site</title>
+    <link>https://example.com/post/</link>
+    <description>Recent content in Posts on Example Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 14 Mar 2021 05:41:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Java中的Format时间和时间戳</title>
-      <link>http://localhost:1313/post/java%E4%B8%AD%E7%9A%84format%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3/</link>
-      <pubDate>Sun, 14 Mar 2021 05:41:01 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/java%E4%B8%AD%E7%9A%84format%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3/</guid>
-      <description>🧐format时间和时间戳 Timestamp就是所谓的时间戳。这个主要用在数据库上，你可以再java.sql这个包内找到这个类。 一般数据库里</description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Mar 2021 05:35:54 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First</title>
-      <link>http://localhost:1313/post/first/</link>
+      <link>https://example.com/p/first/</link>
       <pubDate>Sun, 14 Mar 2021 05:35:54 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/first/</guid>
+      <guid>https://example.com/p/first/</guid>
       <description>firstdsadasdsadasd dsad
 dsad
 edad dsad</description>
@@ -29,47 +20,93 @@ edad dsad</description>
     
     <item>
       <title>test2</title>
-      <link>http://localhost:1313/post/test2/</link>
+      <link>https://example.com/p/test2/</link>
       <pubDate>Sun, 07 Mar 2021 09:50:50 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/test2/</guid>
-      <description>📋两种内部类用法 1 2 3 4 5 6 7 8 static class Outer { class Inner {} static class StaticInner {} } Outer outer = new Outer(); Outer.Inner inner = outer.new Inner(); Outer.StaticInner inner0 = new Outer.StaticInner(); 🤔为什么设计内部类 1 在一个类内部，需要操作某种属性，而</description>
+      <guid>https://example.com/p/test2/</guid>
+      <description>📋两种内部类用法 static class Outer { class Inner {} static class StaticInner {} } Outer outer = new Outer(); Outer.Inner inner = outer.new Inner(); Outer.StaticInner inner0 = new Outer.StaticInner(); 🤔为什么设计内部类 1 在一个类内部，需要操作某种属性，而这个属性需要涉及的面又很广，我们可以考虑，将这些属性设计为内部类。
+2 好比你设计类 B 的目的只是为了给类 A 使用，那么，我们就可将其设定为内部类，没有必要将类 B 设置成单独的 Java 文件，防止与其他类产生依赖关系。
+🎲解释 根据Oracle官方的说法： Nested classes are divided into two categories: static and non-static. Nested classes that are declared static are called static nested classes. Non-static nested classes are called inner classes.</description>
+    </item>
+    
+    <item>
+      <title>Java中的Format时间和时间戳</title>
+      <link>https://example.com/p/java%E4%B8%AD%E7%9A%84format%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3/</link>
+      <pubDate>Sun, 07 Mar 2021 09:50:40 +0000</pubDate>
+      
+      <guid>https://example.com/p/java%E4%B8%AD%E7%9A%84format%E6%97%B6%E9%97%B4%E5%92%8C%E6%97%B6%E9%97%B4%E6%88%B3/</guid>
+      <description>🧐format时间和时间戳 Timestamp就是所谓的时间戳。这个主要用在数据库上，你可以再java.sql这个包内找到这个类。
+一般数据库里如果用Date这个类的话，那你取出来的时候只能到某一天，也就是日，但是Timestamp的话，就是到小时一直到纳秒，很精确的。
+时间戳就是一种类型，只是精度很高，比datetime要精确的多，通常用来防止数据出现脏读现象 。
+时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总秒数
+🔃java中format时间和时间戳的转换 import java.text.SimpleDateFormat; import java.util.Date; /** * @author MengYingjie * @version 1.0 * @date 2020/10/26 21:33 */ public class Test2 { public static void main(String[] args) { Long SystemTimeStamp = System.currentTimeMillis(); System.out.println(&amp;#34;时间:&amp;#34; + SystemTimeStamp); String timeFormat = stampToDate(SystemTimeStamp); System.out.println(&amp;#34;时间戳转换为时间:&amp;#34; + timeFormat); Long timeStamp = dateToStamp(timeFormat); System.out.println(&amp;#34;时间转换为时间戳:&amp;#34; + timeStamp); } /** * 将时间转换为时间戳 * * @param timeFormat format 时间格式 * @return 时间戳时间格式 */ public static Long dateToStamp(String timeFormat) { SimpleDateFormat sdf = new SimpleDateFormat(&amp;#34;yyyy-MM-dd HH:mm:ss&amp;#34;); Long timeStamp = null; try { timeStamp = sdf.</description>
     </item>
     
     <item>
       <title>🤔为什么JAVA内部类要设计成静态和非静态</title>
-      <link>http://localhost:1313/post/%E4%B8%BA%E4%BB%80%E4%B9%88java%E5%86%85%E9%83%A8%E7%B1%BB%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%88%90%E9%9D%99%E6%80%81%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81/</link>
+      <link>https://example.com/p/%E4%B8%BA%E4%BB%80%E4%B9%88java%E5%86%85%E9%83%A8%E7%B1%BB%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%88%90%E9%9D%99%E6%80%81%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81/</link>
       <pubDate>Sun, 07 Mar 2021 09:50:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E4%B8%BA%E4%BB%80%E4%B9%88java%E5%86%85%E9%83%A8%E7%B1%BB%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%88%90%E9%9D%99%E6%80%81%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81/</guid>
-      <description>📋两种内部类用法 1 2 3 4 5 6 7 8 static class Outer { class Inner {} static class StaticInner {} } Outer outer = new Outer(); Outer.Inner inner = outer.new Inner(); Outer.StaticInner inner0 = new Outer.StaticInner(); 🤔为什么设计内部类 1 在一个类内部，需要操作某种属性，而</description>
+      <guid>https://example.com/p/%E4%B8%BA%E4%BB%80%E4%B9%88java%E5%86%85%E9%83%A8%E7%B1%BB%E8%A6%81%E8%AE%BE%E8%AE%A1%E6%88%90%E9%9D%99%E6%80%81%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81/</guid>
+      <description>📋两种内部类用法 static class Outer { class Inner {} static class StaticInner {} } Outer outer = new Outer(); Outer.Inner inner = outer.new Inner(); Outer.StaticInner inner0 = new Outer.StaticInner(); 🤔为什么设计内部类 1 在一个类内部，需要操作某种属性，而这个属性需要涉及的面又很广，我们可以考虑，将这些属性设计为内部类。
+2 好比你设计类 B 的目的只是为了给类 A 使用，那么，我们就可将其设定为内部类，没有必要将类 B 设置成单独的 Java 文件，防止与其他类产生依赖关系。
+🎲解释 根据Oracle官方的说法： Nested classes are divided into two categories: static and non-static. Nested classes that are declared static are called static nested classes. Non-static nested classes are called inner classes.</description>
     </item>
     
     <item>
       <title>test</title>
-      <link>http://localhost:1313/post/test/</link>
+      <link>https://example.com/p/test/</link>
       <pubDate>Thu, 04 Mar 2021 09:39:50 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/test/</guid>
-      <description>本文由 简悦 SimpRead 转码， 原文地址 blog.csdn.net 一，使用 gitbook init 时，卡在了 Installing GitBook 3.2.3 这一步 解决办法： 一，翻墙 二，使用淘宝镜像下载： npm 下载路径，检查是不是淘宝镜像： 1 2 3</description>
+      <guid>https://example.com/p/test/</guid>
+      <description>本文由 简悦 SimpRead 转码， 原文地址 blog.csdn.net
+ 一，使用 gitbook init 时，卡在了 Installing GitBook 3.2.3 这一步 解决办法： 一，翻墙 二，使用淘宝镜像下载： npm 下载路径，检查是不是淘宝镜像：
+npm config get registrynpm config set registry https://registry.npm.taobao.org切换成淘宝镜像 再检查是不是淘宝镜像：
+npm config get registry再安装：
+gitbook init之前是一直卡在这里，我打了三局王者荣耀都没好！！设置之后，打了一局，回头一看，就出来了！ 但是报错了！！！但这又是另一个悲伤的故事。。。
+二，if (cb) cb.apply(this, arguments)，cb.apply is not a function 产生了如下的报错：
+产生这个报错的原因在于，nodejs 的版本不对，不支持这个 gitbook. 有两个解决办法： 一，切换 nodejs 的版本： 切换成 nodejs 的 v10.21.0 版本就会成功。 当然啦，在这里，我又接触到了新的知识！因为 nodejs 的版本很多，所以，就有 nodejs 的版本控制工具，可以方便地切换版本！但是时间有限，都凌晨一点了！我就采用直接安装 v10.21.0 版本先解决啦~~ 这是这个方法的博客地址，里面有 v10.</description>
     </item>
     
     <item>
       <title>🎯美团笔试-空间回廊</title>
-      <link>http://localhost:1313/post/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/</link>
+      <link>https://example.com/p/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/</link>
       <pubDate>Thu, 04 Mar 2021 09:39:50 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/</guid>
-      <description>⭐ 孟应杰的网站: www.mengyingjie.com ⭐ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以</description>
+      <guid>https://example.com/p/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/</guid>
+      <description>⭐ 孟应杰的网站: www.mengyingjie.com ⭐
+ 📌题目描述： 有一款叫做空间回廊的游戏，游戏中有着n个房间依次相连，如图，1号房间可以走到2号房间，以此类推，n号房间可以走到1号房间。
+这个游戏的最终目的是为了在这些房间中留下尽可能多的烙印，在每个房间里留下烙印所花费的法力值是不相同的，已知他共有m点法力值，这些法力是不可恢复的。
+小明刚接触这款游戏，所以只会耿直的玩，所以他的每一个行动都是可以预料的：
+1.一开始小明位于1号房间。
+2.如果他剩余的法力能在当前的房间中留下一个烙印，那么他就会毫不犹豫的花费法力值。
+3.无论是否留下了烙印，下一个时刻他都会进入下一个房间，如果当前位于i房间，则会进入i+1房间，如果在n号房间则会进入1号房间。
+4.当重复经过某一个房间时，可以再次留下烙印。
+很显然，这个游戏是会终止的，即剩余的法力值不能在任何房间留下烙印的时候，游戏终止。请问他共能留下多少个烙印。
+输入 输入第一行有两个正整数n和m，分别代表房间数量和小明拥有的法力值。(1&amp;lt;=n&amp;lt;=100000,1&amp;lt;=m&amp;lt;=10^18)
+输入第二行有n个正整数，分别代表1~n号房间留下烙印的法力值花费。(1&amp;lt;=a_i&amp;lt;=10^9)
+输出 输出仅包含一个整数，即最多能留下的烙印。
+样例输入 4 21
+2 1 4 3
+样例输出 9
+提示 样例解释： 显然是所有房间都留下两个烙印，然后剩下1点法力值，仅能在2号房间再留下一个烙印.
+⌨代码实现 #include&amp;lt;iostream&amp;gt;using namespace std; int main(){ //输入房间数量m，小明拥有的法力值n  int n, m; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; //输入每个房间消耗的法力值  int arr[n]; for(int i = 0; i &amp;lt; n; i++){ cin &amp;gt;&amp;gt; arr[i]; } //定义两个变量，cnt用来计数，记录留下的烙印数  //sign,为设立的标志，当小明在一圈中消耗过法力值，标志位置为1，  //如果一圈下来sign=0，那么代表这一圈小明没有消耗法力值，那么就可以结束循环了。  int cnt = 0; int sign = 0; //循环开始，因为不知道要循环多少遍，所以中间参数为空  for(int i = 0; ; i++ ){ //如果法力值大于当前格子的法力值  if( m &amp;gt;= arr[i]){ m = m - arr[i]; //法力值减去当前格子的法力值  cnt++; //烙印数+1  sign = 1; //本圈消耗了法力值，sign=1  } //当i = n - 1，说明一次循环结束，如果sign=1，则需要进行下一轮循环  //那么就把sign归0，有因为结束时会有i++，所以i=0-1，那么就开启新一轮循环  if((i == n - 1) &amp;amp;&amp;amp; (sign == 1)){ sign = 0; i = 0-1; } //当i = n - 1，循环结束，sign=0，则不需要继续循环，直接跳出死循环。  else if((i == n - 1) &amp;amp;&amp;amp; (sign == 0)){ break; } } cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl; return 0; }  遇到此类问题，但看了文章还是未解决，</description>
     </item>
     
     <item>
       <title>🔑json到Object到具体对象</title>
-      <link>http://localhost:1313/post/json%E5%88%B0object%E5%88%B0%E5%85%B7%E4%BD%93%E5%AF%B9%E8%B1%A1/</link>
+      <link>https://example.com/p/json%E5%88%B0object%E5%88%B0%E5%85%B7%E4%BD%93%E5%AF%B9%E8%B1%A1/</link>
       <pubDate>Tue, 02 Mar 2021 09:39:50 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/json%E5%88%B0object%E5%88%B0%E5%85%B7%E4%BD%93%E5%AF%B9%E8%B1%A1/</guid>
-      <description>🏡环境 SpringBoot + lombok 📋遇到需求 大概意思 给出一个参数通过URI接收一个对象test（可能是两种类的对象）和一个type（判断test类型） 🌌假设： 如果</description>
+      <guid>https://example.com/p/json%E5%88%B0object%E5%88%B0%E5%85%B7%E4%BD%93%E5%AF%B9%E8%B1%A1/</guid>
+      <description>🏡环境 SpringBoot + lombok
+📋遇到需求 大概意思
+给出一个参数通过URI接收一个对象test（可能是两种类的对象）和一个type（判断test类型）
+🌌假设： 如果type为0，test为TestTest对象，
+如果type为1，test为TestTest2对象
+🔬实现过程： TestTest.class和TestTest2.class
+@Data @Accessors(chain = true) public class TestTest { String abc; String aaa; TestTest2 test2; } @Data @Accessors(chain = true) public class TestTest2 { String ddd; String ccc; } Controler
+@RestController @RequestMapping(&amp;#34;/api/v1&amp;#34;) public class TestController { private final Logger log = LoggerFactory.getLogger(TestController.class); @PostMapping(&amp;#34;/hello&amp;#34;) public String helloWorld(String type, @RequestBody Object test) throws IOException { log.info(&amp;#34;test {}&amp;#34;, test.toString()); if (type.equals(&amp;#34;0&amp;#34;)) { TestTest testTest = new TestTest(); ObjectMapper objectMapper = new ObjectMapper(); String testString = objectMapper.</description>
     </item>
     
   </channel>

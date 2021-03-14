@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='本文由 简悦 SimpRead 转码， 原文地址 blog.csdn.net
+ 一，使用 gitbook init 时，卡在了 Installing GitBook 3.2.3 这一步 解决办法： 一，翻墙 二，使用淘宝镜像下载： npm 下载路径，检查是不是淘宝镜像：
+npm config get registrynpm config set registry https://registry.npm.taobao.org切换成淘宝镜像 再检查是不是淘宝镜像：
+npm config get registry再安装：
+gitbook init之前是一直卡在这里，我打了三局王者荣耀都没好！！设置之后，打了一局，回头一看，就出来了！ 但是报错了！！！但这又是另一个悲伤的故事。。。
+二，if (cb) cb.apply(this, arguments)，cb.apply is not a function 产生了如下的报错：
+产生这个报错的原因在于，nodejs 的版本不对，不支持这个 gitbook. 有两个解决办法： 一，切换 nodejs 的版本： 切换成 nodejs 的 v10.21.0 版本就会成功。 当然啦，在这里，我又接触到了新的知识！因为 nodejs 的版本很多，所以，就有 nodejs 的版本控制工具，可以方便地切换版本！但是时间有限，都凌晨一点了！我就采用直接安装 v10.21.0 版本先解决啦~~ 这是这个方法的博客地址，里面有 v10.'><title>test</title>
+
+<link rel='canonical' href='https://example.com/p/test/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='test'>
+<meta property='og:description' content='本文由 简悦 SimpRead 转码， 原文地址 blog.csdn.net
+ 一，使用 gitbook init 时，卡在了 Installing GitBook 3.2.3 这一步 解决办法： 一，翻墙 二，使用淘宝镜像下载： npm 下载路径，检查是不是淘宝镜像：
+npm config get registrynpm config set registry https://registry.npm.taobao.org切换成淘宝镜像 再检查是不是淘宝镜像：
+npm config get registry再安装：
+gitbook init之前是一直卡在这里，我打了三局王者荣耀都没好！！设置之后，打了一局，回头一看，就出来了！ 但是报错了！！！但这又是另一个悲伤的故事。。。
+二，if (cb) cb.apply(this, arguments)，cb.apply is not a function 产生了如下的报错：
+产生这个报错的原因在于，nodejs 的版本不对，不支持这个 gitbook. 有两个解决办法： 一，切换 nodejs 的版本： 切换成 nodejs 的 v10.21.0 版本就会成功。 当然啦，在这里，我又接触到了新的知识！因为 nodejs 的版本很多，所以，就有 nodejs 的版本控制工具，可以方便地切换版本！但是时间有限，都凌晨一点了！我就采用直接安装 v10.21.0 版本先解决啦~~ 这是这个方法的博客地址，里面有 v10.'>
+<meta property='og:url' content='https://example.com/p/test/'>
+<meta property='og:site_name' content='Example Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='c&#43;&#43;' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2021-03-04T09:39:50&#43;00:00'/><meta property='article:modified_time' content='2021-03-04T09:39:50&#43;00:00'/>
+<meta name="twitter:title" content="test">
+<meta name="twitter:description" content="本文由 简悦 SimpRead 转码， 原文地址 blog.csdn.net
+ 一，使用 gitbook init 时，卡在了 Installing GitBook 3.2.3 这一步 解决办法： 一，翻墙 二，使用淘宝镜像下载： npm 下载路径，检查是不是淘宝镜像：
+npm config get registrynpm config set registry https://registry.npm.taobao.org切换成淘宝镜像 再检查是不是淘宝镜像：
+npm config get registry再安装：
+gitbook init之前是一直卡在这里，我打了三局王者荣耀都没好！！设置之后，打了一局，回头一看，就出来了！ 但是报错了！！！但这又是另一个悲伤的故事。。。
+二，if (cb) cb.apply(this, arguments)，cb.apply is not a function 产生了如下的报错：
+产生这个报错的原因在于，nodejs 的版本不对，不支持这个 gitbook. 有两个解决办法： 一，切换 nodejs 的版本： 切换成 nodejs 的 v10.21.0 版本就会成功。 当然啦，在这里，我又接触到了新的知识！因为 nodejs 的版本很多，所以，就有 nodejs 的版本控制工具，可以方便地切换版本！但是时间有限，都凌晨一点了！我就采用直接安装 v10.21.0 版本先解决啦~~ 这是这个方法的博客地址，里面有 v10.">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://example.com">Example Site</a></h1>
+        <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://example.com" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AE%97%E6%B3%95/" >
+                算法
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/test/">test</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Mar 04, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p>本文由 <a class="link" href="http://ksria.com/simpread/"  target="_blank" rel="noopener"
+    >简悦 SimpRead</a> 转码， 原文地址 <a class="link" href="https://blog.csdn.net/weixin_42349568/article/details/108414441"  target="_blank" rel="noopener"
+    >blog.csdn.net</a></p>
+</blockquote>
+<h2 id="一使用-gitbook-init-时卡在了-installing-gitbook-323-这一步">一，使用 gitbook init 时，卡在了 Installing GitBook 3.2.3 这一步</h2>
+<p>解决办法： 
+一，翻墙 
+二，使用淘宝镜像下载： 
+npm 下载路径，检查是不是淘宝镜像：</p>
+<pre><code>npm config get registry
+
+npm config set registry https://registry.npm.taobao.org
+
+</code></pre><p>切换成淘宝镜像 
+再检查是不是淘宝镜像：</p>
+<pre><code>npm config get registry
+
+</code></pre><p>再安装：</p>
+<pre><code>gitbook init
+
+</code></pre><p>之前是一直卡在这里，我打了三局王者荣耀都没好！！设置之后，打了一局，回头一看，就出来了！ 
+但是报错了！！！但这又是另一个悲伤的故事。。。</p>
+<h2 id="二if-cb-cbapplythis-argumentscbapply-is-not-a-function">二，if (cb) cb.apply(this, arguments)，cb.apply is not a function</h2>
+<p>产生了如下的报错：</p>
+<p><img src="/20200905013300483.png" alt=""  /></p>
+<p>产生这个报错的原因在于，nodejs 的版本不对，不支持这个 gitbook. 
+有两个解决办法： 
+<strong>一，切换 nodejs 的版本：</strong> 
+切换成 nodejs 的 v10.21.0 版本就会成功。 
+当然啦，在这里，我又接触到了新的知识！因为 nodejs 的版本很多，所以，就有 nodejs 的版本控制工具，可以方便地切换版本！但是时间有限，都凌晨一点了！我就采用直接安装 v10.21.0 版本先解决啦~~ 
+这是这个方法的博客地址，里面有 v10.21.0 版本的 nodejs 下载：</p>
+<p><a class="link" href="https://blog.csdn.net/Lowerce/article/details/107579261"  target="_blank" rel="noopener"
+    >https://blog.csdn.net/Lowerce/article/details/107579261</a></p>
+<p><strong>二，第二个方法呢，就更方便且不要脸了，就是把报错的代码注释掉！</strong> 
+直接打开报错的文件：<br>
+C:\Users\Administrator\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm\node_modules\graceful-fs\polyfills.js 
+错误的位置在代码的第 287 行，就是这个死乞白赖的函数！！！</p>
+<pre><code>function statFix (orig) {
+  if (!orig) return orig
+  // Older versions of Node erroneously returned signed integers for
+  // uid + gid.
+  return function (target, cb) {
+    return orig.call(fs, target, function (er, stats) {
+      if (!stats) return cb.apply(this, arguments)
+      if (stats.uid &lt; 0) stats.uid += 0x100000000
+      if (stats.gid &lt; 0) stats.gid += 0x100000000
+      if (cb) cb.apply(this, arguments)
+    })
+  }
+}
+</code></pre><p>这个函数的作用是用来修复 node.js 的一些 bug, 但是我就为了学个 gitbook, 没必要难为我自己！
+所以，我就找到这个函数的调用：</p>
+<p><img src="/2020090501561671.png" alt=""  /></p>
+<p><img src="/20200905015630899.png" alt=""  />
+就成这样子啦！嘿嘿~ 
+现在是夜里，隔壁的两个小姑娘估计在看电影，网速不是很快，我又等了十来分钟，就完成啦！！</p>
+<p><img src="/20200905022624490.png" alt=""  /></p>
+<p>完结！撒花花！啦啦啦！！！</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/c&#43;&#43;/">c&#43;&#43;</a>
+        
+            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%BE%8E%E5%9B%A2%E7%AC%94%E8%AF%95-%E7%A9%BA%E9%97%B4%E5%9B%9E%E5%BB%8A/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">🎯美团笔试-空间回廊</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 Example Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
